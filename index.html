@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Visualization</title>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        background-color: #ffffff;
+        margin: 0;
+        font-family: Futura, sans-serif;
+        overflow: hidden;
+      }
+      a {
+        color: gray;
+      }
+      .info {
+        position: relative;;
+        width: 100%;
+        color: #ffffff;
+        padding: 0px;
+        margin: 0px;
+        font-family: Futura;
+        font-size: 15px;
+        font-weight: normal;
+        text-align: center;
+        z-index: 1;
+      }
+      #title {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      #menu {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+      }
+      #footer {
+        position:absolute;
+        bottom:0;
+        right:0;
+        font-family: Futura;
+        font-size: 11px;
+        color: gray;
+        text-align: center;
+      }
+      #left-menu {
+        position: absolute;
+        margin-bottom: 20px;
+        height: 100%;
+        background-color: #000000;
+      }
+      #top-menu {
+        position: absolute;
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        background-color: #000000;
+      }
+      .element {
+        /*display:block;
+        overflow:auto;*/
+        width: 320px;
+        height: 380px;
+        box-shadow: 0px 0px 12px rgba(0,255,255,0);
+        border: 1px solid rgba(255,255,255,0);
+        text-align: center;
+        cursor: default;
+      }
+      .element:hover {
+        box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+        border: 1px solid rgba(127,255,255,0.75);
+      }
+        .element .number {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: 12px;
+          color: rgba(127,255,255,0.75);
+        }
+        .element .symbol {
+          position: absolute;
+          top: 40px;
+          left: 0px;
+          right: 0px;
+          font-size: 60px;
+          font-weight: bold;
+          color: rgba(255,255,255,0.75);
+          text-shadow: 0 0 10px rgba(0,255,255,0.95);
+        }
+        .element .details {
+          position: absolute;
+          bottom: 15px;
+          left: 0px;
+          right: 0px;
+          font-size: 12px;
+          color: rgba(127,255,255,0.75);
+        }
+      button {
+        color: #000000;
+        background: transparent;
+        outline: 1px solid #000000;
+        border: 0px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #e5e5e5;
+      }
+      button:active {
+        color: #000000;
+        background-color: #cccccc;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/libs/tween.min.js"></script>
+    <script src="js/controls/TrackballControls.js"></script>
+    <script src="js/renderers/CSS3DRenderer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/async/1.4.2/async.js"></script>
+    <div id="container"></div>
+
+    <div id="menu">
+      <!-- <button id="table">TABLE</button> -->
+
+      <button id="sphere">SPHERE</button>
+      <button id="helix">HELIX</button>
+      <button id="grid">GRID</button>
+    </div>
+    <div id="top-menu">
+      <div id="content">
+        <div id="title" class="info">Visualization</div>
+        <div class="info"> Selection of Books from "Online Bibliography: Contemporary Race Relations in Venezuela"</div>
+      </div>
+    </div>
+    <div id="footer">Visualization based on <a href="http://threejs.org" target="_blank">three.js</a> - <a href="https://plus.google.com/113862800338869870683/posts/QcFk5HrWran" target="_blank">periodic table</a>.</div>
+
+    <script src="visualize.js"> </script>
+  </body>
+</html>
